@@ -19,16 +19,16 @@ window.SITE_CONFIG = {
   city: "India",
 
   /* ---- Contact ---- */
-  whatsapp: "919999999999",          // country code + number, no + or spaces
+  whatsapp: "9977532259",          // country code + number, no + or spaces
   whatsappMessage: "Hi! I saw your portfolio and want to discuss a project.",
-  instagram: "yourhandle",           // without @
-  email: "you@example.com",
+  instagram: "aditopia7",           // without @
+  email: "shrivastavaaditi3457@gmail.com",
 
   /* ---- Stats card ---- */
   stats: [
-    { value: "120+", label: "projects delivered", note: "and counting!" },
-    { value: "40+",  label: "happy clients" },
-    { value: "2M+",  label: "views generated" }
+    { value: "25+", label: "projects delivered", note: "and counting!" },
+    { value: "10+",  label: "happy clients" },
+    { value: "50k+",  label: "views generated" }
   ],
 
   /* ---- Categories (id is saved in the database, label is shown) ---- */
