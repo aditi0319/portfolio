@@ -6,8 +6,8 @@ window.SITE_CONFIG = {
      Find these in Supabase → Project Settings → API (Data API / API Keys).
      Use the "Project URL" and the "anon public" (or "publishable") key.
      NEVER paste the service_role / secret key here. */
-  supabaseUrl: "YOUR_SUPABASE_URL",
-  supabaseAnonKey: "YOUR_SUPABASE_ANON_KEY",
+  supabaseUrl: "https://htltyamlzeorkepfrnne.superbase.co",
+  supabaseAnonKey: "sb_publishable_kC4iTMJ9Pa5ugmC9Zuxhtg_M6osVVGP",
   bucket: "portfolio",
 
   /* ---- About you ---- */
