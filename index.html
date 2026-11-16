@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio · Reels, Posters & Design</title>
+  <meta name="description" content="Reels editing, café & food posters, jewellery and product ads, thumbnails and rap posters.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <a class="logo" href="#top"><i></i><span data-cfg="name">Your Name</span></a>
+    <nav class="links" id="links">
+      <a href="#top" class="on">Home</a>
+      <a href="#work">Work</a>
+      <a href="#reels">Reels</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+  </header>
+
+  <main id="top">
+    <!-- ===== HERO BENTO ===== -->
+    <section class="bento">
+      <div class="card intro reveal">
+        <div class="hand" data-cfg="greeting">hey there 👋</div>
+        <h1 data-cfg="headline">I edit Reels &amp; design posters that sell.</h1>
+        <p data-cfg="intro"></p>
+        <div class="cta">
+          <a href="#work" class="btn dark">View work</a>
+          <a href="#" class="btn light js-wa">DM me ↗</a>
+        </div>
+      </div>
+
+      <div class="card stat reveal" id="statCard"></div>
+      <a class="card media-card reveal" id="heroReel" data-slot="reel"></a>
+      <a class="card media-card reveal" id="heroPoster" data-slot="poster"></a>
+
+      <div class="card cats reveal">
+        <h5>What I make</h5>
+        <div id="catChips" class="chips"></div>
+      </div>
+
+      <a class="card media-card reveal" id="heroExtra1" data-slot="extra1"></a>
+      <a class="card media-card wide reveal" id="heroWide" data-slot="wide"></a>
+      <a class="card media-card reveal" id="heroExtra2" data-slot="extra2"></a>
+
+      <div class="card contact-mini reveal">
+        <h5>Got a project?</h5>
+        <div class="hand">let's make it pop ✨</div>
+        <div class="socials">
+          <a href="#" class="js-ig" aria-label="Instagram">IG</a>
+          <a href="#" class="js-wa" aria-label="WhatsApp">WA</a>
+          <a href="#" class="js-mail" aria-label="Email">@</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MARQUEE ===== -->
+    <div class="marquee" aria-hidden="true"><div class="track" id="marquee"></div></div>
+
+    <!-- ===== WORK ===== -->
+    <section class="section" id="work">
+      <div class="sec-head">
+        <div>
+          <div class="hand">selected work</div>
+          <h2>Posters, photos &amp; designs</h2>
+        </div>
+        <span class="count" id="workCount"></span>
+      </div>
+      <div class="filters" id="filters"></div>
+      <div class="masonry" id="workGrid"></div>
+      <p class="empty" id="workEmpty" hidden>Nothing here yet. New work coming soon ✨</p>
+    </section>
+
+    <!-- ===== REELS ===== -->
+    <section class="section" id="reels">
+      <div class="sec-head">
+        <div>
+          <div class="hand">in motion</div>
+          <h2>Reels &amp; videos</h2>
+        </div>
+        <div class="row-nav">
+          <button aria-label="Scroll left" data-dir="-1">←</button>
+          <button aria-label="Scroll right" data-dir="1">→</button>
+        </div>
+      </div>
+      <div class="reel-row" id="reelRow"></div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="section" id="services">
+      <div class="sec-head">
+        <div>
+          <div class="hand">how I can help</div>
+          <h2>Services</h2>
+        </div>
+      </div>
+      <div class="services" id="servicesGrid"></div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section" id="contact">
+      <div class="contact-big reveal">
+        <div class="hand">your brand deserves better visuals</div>
+        <h2>Let's create something people <span>can't scroll past.</span></h2>
+        <div class="cta">
+          <a href="#" class="btn lemon js-wa">💬 WhatsApp me</a>
+          <a href="#" class="btn outline js-ig">📸 Instagram</a>
+          <a href="#" class="btn outline js-mail">✉️ Email</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> <span data-cfg="name">Your Name</span> · <span data-cfg="role"></span></span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lb-close" aria-label="Close">✕</button>
+    <button class="lb-nav prev" aria-label="Previous">←</button>
+    <div class="lb-body">
+      <div class="lb-media" id="lbMedia"></div>
+      <div class="lb-info" id="lbInfo"></div>
+    </div>
+    <button class="lb-nav next" aria-label="Next">→</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="shared.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

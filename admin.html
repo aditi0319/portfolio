@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin · Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+
+  <!-- Not configured -->
+  <section class="screen" id="setupScreen" hidden>
+    <div class="login-card">
+      <div class="logo"><i></i>Admin</div>
+      <h2>Connect Supabase first</h2>
+      <p>The admin panel needs a free Supabase project to store your work. Open <b>README.md</b> and follow “Setting up the admin panel”, then paste your keys into <b>config.js</b>.</p>
+      <a class="btn dark" href="index.html">← Back to site</a>
+    </div>
+  </section>
+
+  <!-- Login -->
+  <section class="screen" id="loginScreen" hidden>
+    <form class="login-card" id="loginForm">
+      <div class="logo"><i></i><span data-cfg="name">Admin</span></div>
+      <div class="hand">welcome back 👋</div>
+      <h2>Log in to your admin</h2>
+      <label>Email<input type="email" id="loginEmail" required autocomplete="username"></label>
+      <label>Password<input type="password" id="loginPass" required autocomplete="current-password"></label>
+      <button class="btn dark full" type="submit" id="loginBtn">Log in</button>
+      <p class="err" id="loginErr"></p>
+      <a class="small-link" href="index.html">← Back to site</a>
+    </form>
+  </section>
+
+  <!-- Dashboard -->
+  <div class="dash" id="dash" hidden>
+    <aside class="sb">
+      <div class="logo"><i></i><span>Admin</span></div>
+      <button class="sb-link on" data-filter="all">🖼 All work <small id="cAll"></small></button>
+      <div class="sb-cats" id="sbCats"></div>
+      <button class="sb-link" data-filter="featured">⭐ Featured</button>
+      <div class="sb-bottom">
+        <a class="sb-link" href="index.html" target="_blank">↗ View site</a>
+        <button class="sb-link" id="logoutBtn">↩ Log out</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="top">
+        <div>
+          <h2 id="listTitle">All work</h2>
+          <span class="sub" id="userEmail"></span>
+        </div>
+        <button class="btn grad" id="newBtn">+ Add new work</button>
+      </div>
+
+      <div class="cols">
+        <!-- FORM -->
+        <form class="panel form" id="workForm">
+          <div class="form-head">
+            <h4 id="formTitle">Add new work</h4>
+            <button type="button" class="link" id="cancelEdit" hidden>Cancel edit</button>
+          </div>
+
+          <div class="seg" id="sourceSeg">
+            <button type="button" class="on" data-src="upload">⇪ Upload file</button>
+            <button type="button" data-src="link">🔗 Paste link</button>
+          </div>
+
+          <label class="drop" id="drop">
+            <input type="file" id="fileInput" accept="image/*,video/*" hidden>
+            <div class="drop-inner" id="dropInner">
+              <b>⇪</b>
+              <span>Drop image or video here, or <u>browse</u></span>
+              <small>JPG, PNG, WEBP, GIF, MP4, MOV · max 50 MB</small>
+            </div>
+          </label>
+
+          <label id="linkWrap" hidden>Video / image link
+            <input type="url" id="linkInput" placeholder="Instagram reel, YouTube, or direct image/video URL">
+            <small class="hint">Big videos? Post on Instagram/YouTube and paste the link. It saves storage.</small>
+          </label>
+
+          <label>Title<input type="text" id="titleInput" required maxlength="80" placeholder="e.g. Latte Season poster"></label>
+
+          <div class="two">
+            <label>Category<select id="catInput"></select></label>
+            <label>Client (optional)<input type="text" id="clientInput" maxlength="60" placeholder="e.g. Brew & Bloom Café"></label>
+          </div>
+
+          <label id="coverWrap" hidden>Cover image (optional, for videos)
+            <input type="file" id="coverInput" accept="image/*">
+          </label>
+
+          <label class="check"><input type="checkbox" id="featInput"> ⭐ Feature on homepage</label>
+
+          <button class="btn dark full" type="submit" id="saveBtn">Publish to portfolio</button>
+          <div class="progress" id="progress" hidden><i></i></div>
+          <p class="err" id="formErr"></p>
+        </form>
+
+        <!-- LIST -->
+        <section class="panel list">
+          <div class="list-head">
+            <input type="search" id="searchInput" placeholder="Search by title or client…">
+          </div>
+          <div class="items" id="items"></div>
+          <p class="empty" id="itemsEmpty" hidden>No work here yet. Add your first piece on the left ✨</p>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="shared.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
