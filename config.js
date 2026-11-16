@@ -11,7 +11,7 @@ window.SITE_CONFIG = {
   bucket: "portfolio",
 
   /* ---- About you ---- */
-  name: "Your Name",
+  name: "Aditi Shrivastava",
   role: "Video editor & graphic designer",
   greeting: "hey there 👋",
   headline: "I edit Reels & design posters that sell.",
