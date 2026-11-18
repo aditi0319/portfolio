@@ -34,7 +34,7 @@ window.SITE_CONFIG = {
   /* ---- Categories (id is saved in the database, label is shown) ---- */
   categories: [
     { id: "cafe",      label: "Café posters", emoji: "☕" },
-    { id: "food",      label: "Food photos",  emoji: "🍔" },
+    { id: "f&b",      label: "Food & Beverage photos",  emoji: "🍔" },
     { id: "jewellery", label: "Jewellery",    emoji: "💍" },
     { id: "product",   label: "Product ads",  emoji: "🧴" },
     { id: "thumbnail", label: "Thumbnails",   emoji: "▶️" },
