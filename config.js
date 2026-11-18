@@ -15,7 +15,7 @@ window.SITE_CONFIG = {
   role: "Video editor & graphic designer",
   greeting: "hey there 👋",
   headline: "I edit Reels & design posters that sell.",
-  intro: "Cafés, food spots, jewellery brands, rappers and creators. If it needs to look good online, I make it.",
+  intro: "Cafés, food spots, jewellery brands, events and creators. If it needs to look good online, I make it.",
   city: "India",
 
   /* ---- Contact ---- */
@@ -34,11 +34,11 @@ window.SITE_CONFIG = {
   /* ---- Categories (id is saved in the database, label is shown) ---- */
   categories: [
     { id: "cafe",      label: "Café posters", emoji: "☕" },
-    { id: "f&b",      label: "Food & Beverage",  emoji: "🍔" },
+    { id: "food",      label: "Food & Beverage",  emoji: "🍔" },
     { id: "jewellery", label: "Jewellery",    emoji: "💍" },
     { id: "product",   label: "Product ads",  emoji: "🧴" },
     { id: "thumbnail", label: "Thumbnails",   emoji: "▶️" },
-    { id: "rap",       label: "Rap posters",  emoji: "🎤" },
+    { id: "rap",       label: "Event posters",  emoji: "🎤" },
     { id: "reel",      label: "Reels",        emoji: "🎬" },
     { id: "other",     label: "Other",        emoji: "✨" }
   ],
